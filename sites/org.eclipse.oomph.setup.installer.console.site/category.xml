@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+   <!-- Setup -->
+   <category-def name="org.eclipse.oomph.setup.installer.console.category" label="Oomph Console"/>
+   <feature id="org.eclipse.oomph.console.feature" version="0.0.0">
+      <category name="org.eclipse.oomph.setup.category"/>
+   </feature>
+   <feature id="org.eclipse.oomph.sdk.feature" version="0.0.0">
+      <category name="org.eclipse.oomph.setup.category"/>
+   </feature>
+
+</site>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Oomph Console Core
+Bundle-SymbolicName: org.eclipse.oomph.console.core
+Bundle-Version: 1.3.0.qualifier
+Bundle-Activator: org.eclipse.oomph.console.core.Activator
+Bundle-Vendor: AgentLab
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.equinox.p2.core;bundle-version="2.4.0",
+ org.eclipse.oomph.p2.core;bundle-version="1.2.0",
+ org.eclipse.oomph.setup.core;bundle-version="1.2.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.oomph.console.core.application,
+ org.eclipse.oomph.console.core.p2,
+ org.eclipse.oomph.console.core.parameters,
+ org.eclipse.oomph.console.core.util
