@@ -13,7 +13,7 @@
     xmlns:workingsets="http://www.eclipse.org/oomph/workingsets/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore http://www.eclipse.org/oomph/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/WorkingSets.ecore"
     name="oomph.console"
-    label="Oomph Console">
+    label="Oomph Installer Console">
   <annotation
       source="http://www.eclipse.org/oomph/setup/BrandingInfo">
     <detail
@@ -163,7 +163,7 @@
         location="${jre.location-1.8}"/>
     <setupTask
         xsi:type="git:GitCloneTask"
-        id="git.clone.oomph"
+        id="git.clone.oomph.console"
         remoteURI="agentlab/org.eclipse.oomph.console"
         checkoutBranch="master"
         userID="">
@@ -205,7 +205,7 @@
             source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
           <detail
               key="location">
-            <value>${git.clone.oomph.location/releng/org.eclipse.oomph.releng/org.eclipse.oomph.releng.target}</value>
+            <value>${git.clone.oomph.console.location/releng/org.eclipse.oomph.setup.installer.console.releng/org.eclipse.oomph.setup.installer.console.releng.target}</value>
           </detail>
           <detail
               key="extraUnits">
@@ -231,14 +231,7 @@
         <requirement
             name="*"/>
         <sourceLocator
-            rootFolder="${git.clone.oomph.location}">
-          <predicate
-              xsi:type="predicates:NotPredicate">
-            <operand
-                xsi:type="predicates:FilePredicate"
-                filePattern="prototype.txt"/>
-          </predicate>
-        </sourceLocator>
+            rootFolder="${git.clone.oomph.console.location}"/>
         <repositoryList
             name="Oxygen">
           <repository
@@ -259,6 +252,8 @@
               url="http://download.eclipse.org/technology/swtbot/snapshots"/>
           <repository
               url="http://download.eclipse.org/webtools/repository/oxygen"/>
+          <repository
+              url="http://download.eclipse.org/oomph/updates/milestone/latest"/>
         </repositoryList>
         <repositoryList
             name="Neon">
