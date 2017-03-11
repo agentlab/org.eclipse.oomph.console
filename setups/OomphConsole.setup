@@ -323,28 +323,14 @@
     <setupTask
         xsi:type="setup.workingsets:WorkingSetTask">
       <workingSet
-          name="Oomph Setup">
+          name="Oomph Console">
         <predicate
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org\.eclipse\.oomph\.setup.*"/>
+              pattern="org\.eclipse\.oomph.*"/>
           <operand
-              xsi:type="workingsets:ExclusionPredicate"
-              excludedWorkingSet="//@streams[name='master']/@setupTasks.4/@workingSets.1"/>
-        </predicate>
-      </workingSet>
-      <workingSet
-          name="Oomph Setup Extensions">
-        <predicate
-            xsi:type="predicates:AndPredicate">
-          <operand
-              xsi:type="predicates:NamePredicate"
-              pattern="org\.eclipse\.oomph\.setup.*"/>
-          <operand
-              xsi:type="predicates:FilePredicate"
-              filePattern="build.properties"
-              contentPattern="oomph\.setup\.extension=true"/>
+              xsi:type="workingsets:ExclusionPredicate"/>
         </predicate>
       </workingSet>
       <workingSet
@@ -352,108 +338,6 @@
         <predicate
             xsi:type="predicates:NamePredicate"
             pattern="setups.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Targlets">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.targlets.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph P2 Management">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.p2.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Project Configuration">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.projectconfig.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Version Management">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.version.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Dynamic Working Sets">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.workingsets.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Preferences Management">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.preferences.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Utilities">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.util.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.ui.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.base.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.jreinfo.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.predicates.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.resources.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.tests.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Tools">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.gitbash.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.launches.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.manifests.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.projectcopy.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.ostools.*"/>
-      </workingSet>
-      <workingSet
-          name="Oomph Releng">
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.simrel\.build"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.all-feature"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.license-feature"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.extractor.*"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.parent"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.site"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.oomph\.releng.*"/>
       </workingSet>
     </setupTask>
   </stream>
