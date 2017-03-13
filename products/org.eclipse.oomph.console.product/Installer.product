@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Eclipse Installer Console" uid="org.eclipse.oomph.setup.installer.console.product" id="org.eclipse.oomph.setup.installer.console.product" application="org.eclipse.oomph.console.application" version="1.6.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Eclipse Installer Console" uid="org.eclipse.oomph.console.product" id="org.eclipse.oomph.console.product" application="org.eclipse.oomph.console.application" version="1.6.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <configIni use="">
    </configIni>
 
    <launcherArgs>
       <programArgs>--launcher.appendVmargs
---launcher.XXMaxPermSize
-256M
+--launcher.XXMaxPermSize 256M
 -name
 Eclipse Installer
 -data
@@ -46,13 +45,24 @@ Eclipse Installer
    <features>
       <feature id="org.eclipse.oomph.console.feature"/>
       <feature id="org.eclipse.oomph.sdk.feature"/>
+      <feature id="org.eclipse.oomph.console.deps" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.oomph.console" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.oomph.console.core" autoStart="true" startLevel="3" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>

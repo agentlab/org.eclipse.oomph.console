@@ -4,7 +4,6 @@ import org.eclipse.core.runtime.IProduct;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.oomph.console.core.parameters.Parameters;
-import org.eclipse.ui.internal.ProductProperties;
 
 @SuppressWarnings("restriction")
 public class ConsoleProgressMonitor implements IProgressMonitor {
@@ -57,7 +56,7 @@ public class ConsoleProgressMonitor implements IProgressMonitor {
 	private void printHeader() {
 		IProduct theProduct = Platform.getProduct();
 		if (theProduct != null) {
-			String headerText = ProductProperties.getAboutText(theProduct);
+            String headerText = "asdfsdf";//ProductProperties.getAboutText(theProduct);
 			System.out.println(headerText);
 			System.out.println(Parameters.VERSION.toUpperCase());
 		}

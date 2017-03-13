@@ -14,4 +14,16 @@
          </run>
       </application>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.oomph.console.application"
+            name="Eclipse Installer Console">
+         <property
+               name="appName"
+               value="Eclipse Installer Console">
+         </property>
+      </product>
+   </extension>
 </plugin>

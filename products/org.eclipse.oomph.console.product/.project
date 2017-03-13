@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.eclipse.oomph.setup.installer.console.product</name>
+	<name>org.eclipse.oomph.console.product</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,7 +10,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1396938000000</id>
+			<id>0</id>
 			<name></name>
 			<type>10</type>
 			<matcher>

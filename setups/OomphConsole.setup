@@ -212,9 +212,15 @@
           </detail>
         </annotation>
         <requirement
-            name="org.eclipse.userstorage.sdk.feature.group"/>
+            name="org.eclipse.userstorage"/>
         <requirement
             name="org.eclipse.oomph.setup.sdk.feature.group"/>
+        <requirement
+            name="org.eclipse.equinox.core.sdk.feature.group"/>
+        <requirement
+            name="org.eclipse.equinox.sdk.feature.group"/>
+        <requirement
+            name="org.eclipse.core.runtime.feature.feature.group"/>
         <requirement
             name="*"/>
         <sourceLocator
@@ -255,9 +261,7 @@
           <repository
               url="http://download.eclipse.org/modeling/emf/cdo/orbit/latest-R"/>
           <repository
-              url="http://download.eclipse.org/oomph/uss/updates/latest"/>
-          <repository
-              url="http://download.eclipse.org/oomph/updates/milestone/latest"/>
+              url="http://download.eclipse.org/oomph/drops/release/1.6.0"/>
         </repositoryList>
         <repositoryList
             name="Mars">

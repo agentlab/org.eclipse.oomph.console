@@ -42,19 +42,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.edit"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.common"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.ecf.filetransfer.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.oomph.p2"
          version="0.0.0"/>
 
    <plugin
@@ -66,13 +58,6 @@
 
    <plugin
          id="org.eclipse.oomph.base.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.oomph.p2"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -261,6 +246,27 @@
 
    <plugin
          id="org.eclipse.oomph.extractor.lib"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.core.jobs"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.oomph.p2.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
