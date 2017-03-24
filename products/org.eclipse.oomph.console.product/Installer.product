@@ -7,18 +7,12 @@
    </configIni>
 
    <launcherArgs>
-      <programArgs>--launcher.appendVmargs
---launcher.XXMaxPermSize 256M
--name
-Eclipse Installer
--data
-@noDefault
+      <programArgs>--launcher.appendVmargs --launcher.XXMaxPermSize 256M -name Eclipse Installer -data @noDefault
       </programArgs>
       <programArgsLin>--launcher.GTK_version
 2
       </programArgsLin>
-      <vmArgs>-Xms256M
--Xmx1024M
+      <vmArgs>-Xms256M -Xmx1024M -Dequinox.ds.idle_timeout=10 -Doomph.product.id=epp.package.java -Doomph.product.version=neon -Doomph.installer.verbose=true -Doomph.installation.location=&quot;c:/tmp&quot;
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread
 -Dorg.eclipse.swt.internal.carbon.smallFonts
@@ -30,6 +24,7 @@ Eclipse Installer
    <launcher name="eclipse-inst-console">
       <linux icon="icons/eclipse-inst.xpm"/>
       <macosx icon="icons/eclipse-inst.icns"/>
+      <solaris/>
       <win useIco="true">
          <ico path="icons/eclipse-inst.ico"/>
          <bmp/>
@@ -37,6 +32,7 @@ Eclipse Installer
    </launcher>
 
    <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
 
    <plugins>
@@ -45,17 +41,18 @@ Eclipse Installer
    <features>
       <feature id="org.eclipse.oomph.console.feature"/>
       <feature id="org.eclipse.oomph.sdk.feature"/>
-      <feature id="org.eclipse.oomph.console.deps" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.oomph.console.deps"/>
+      <feature id="org.eclipse.equinox.core.feature" version="1.3.3.v20170209-1843"/>
    </features>
 
    <configurations>
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.oomph.console" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.oomph.console.core" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.oomph.console" autoStart="true" startLevel="5" />
+      <plugin id="org.eclipse.oomph.console.core" autoStart="true" startLevel="5" />
    </configurations>
 
    <preferencesInfo>

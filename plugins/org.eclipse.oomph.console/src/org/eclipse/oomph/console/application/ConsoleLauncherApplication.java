@@ -12,7 +12,8 @@ public class ConsoleLauncherApplication extends AbstractLauncherApplication {
 		ConsoleInstaller installer = new ConsoleInstaller();
 		long startTime = System.currentTimeMillis();
 		try {
-			installer.run();
+			//installer.run();
+			Thread.sleep(10000);
 		} catch (Exception e) {
 			if (Parameters.VERBOSE) {
 				e.printStackTrace();

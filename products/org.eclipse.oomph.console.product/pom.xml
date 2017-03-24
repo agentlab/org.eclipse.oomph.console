@@ -10,7 +10,7 @@
 	<relativePath>../../releng/org.eclipse.oomph.parent</relativePath>
   </parent>
   
-  <artifactId>org.eclipse.oomph.setup.installer.console.product</artifactId>
+  <artifactId>org.eclipse.oomph.console.product</artifactId>
   <version>1.6.0-SNAPSHOT</version>
   <packaging>eclipse-repository</packaging>
 

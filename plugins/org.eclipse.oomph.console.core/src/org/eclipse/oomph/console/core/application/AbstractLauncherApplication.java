@@ -46,7 +46,7 @@ public abstract class AbstractLauncherApplication implements IApplication {
 		run();
 		setSharedBundlePoolPermissions(System.getProperty("setup.p2.agent"));
 
-		return null;
+		return org.eclipse.equinox.app.IApplicationContext.EXIT_ASYNC_RESULT;//null;
 	}
 
 	public abstract void run();
